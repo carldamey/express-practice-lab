@@ -1,0 +1,12 @@
+<body>
+    <h1>All Skills</h1>
+    <ul>
+      <% skills.forEach(function(s) { %>
+        <li>
+          <%= s.skill %>
+            - 
+          <%= s.learned ? "learned" : "not learned" %>
+        </li>
+      <% }); %>
+    </ul>
+  </body>
