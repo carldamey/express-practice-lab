@@ -1,12 +1,14 @@
 // Require modules
-const express = require("express");
+const express = require("express")
+const path = require("path")
   
 // Create the Express app
-const app = express();
+const app = express()
   
 // Configure the app (app.set)
-  
-  
+app.set("view engine", "ejs")  
+app.set("views", path.join(__dirname, "views"))
+
 // Mount middleware (app.use)
   
   
@@ -16,7 +18,7 @@ app.get("/", function (req, res) {
 });
 
 app.get("/home", function (req, res) {
-    res.send("<h1>Home Page<h1>")
+    res.render("home")
 })
   
 // Tell the app to listen on port 3000
